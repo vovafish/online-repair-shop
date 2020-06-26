@@ -1,0 +1,25 @@
+{
+  "name": "trainingproject",
+  "version": "1.0.0",
+  "description": "A website developing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vovafish/trainingProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vovafish/trainingProject/issues"
+  },
+  "homepage": "https://github.com/vovafish/trainingProject#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
