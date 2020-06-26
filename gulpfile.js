@@ -1,5 +1,7 @@
 const gulp = require('gulp');
-var browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
+const cssnano = require('gulp-cssnano');
+
 
 gulp.task('hello', function (done) {
   console.log('Hello World');

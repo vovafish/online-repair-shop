@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/vovafish/trainingProject#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-cssnano": "^2.1.3"
   },
   "dependencies": {
     "browser-sync": "^2.26.7"
