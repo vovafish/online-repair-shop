@@ -19,11 +19,22 @@
     position: relative
     max-width: 47.857rem
     margin-left: 4.285rem
+  &__title
+    margin-bottom: 1rem
   &__text
+    font-family: 'Futura Book', sans-serif
     font-size: 1.571rem
     max-width: 504px
+    line-height: 1.4
+    margin: 0
+    margin-bottom: 3rem
   &__button
-    margin-right: 20px
+    font-family: 'Futura Demi', sans-serif
+    margin-right: 1.214rem
+    &--primary
+      padding: 18px 26px
+    &--outline
+      padding: 18px 42px
   &__instagram
     position: absolute
     left: 0
@@ -35,6 +46,8 @@
     display: flex
     justify-content: center
     align-items: center
+    font-family: 'Yeseva One', cursive
+    font-size: 0.857rem
     left: 0
     bottom: 0
     min-width: 17.642rem
@@ -50,7 +63,7 @@
       height: 30px
       border: 2px solid $primary
       border-radius: 50%
-      margin-left: 12px
+      margin-left: 1.214rem
 .instagram
   display: flex
   justify-content: center
@@ -59,17 +72,19 @@
   &__link
     display: flex
     align-items: center
+    font-family: 'Futura Demi', sans-serif
     text-transform: uppercase
     color: $primary
     text-decoration: none
     transform: rotate(90deg)
     line-height: 0.8
+    font-size: 1rem
     &::after
       content: ''
       height: 1px
       width: 51px
       background-color: $primary
-      margin-left: 10px
+      margin-left: 1rem
       
 .title
   margin: 0
@@ -77,5 +92,6 @@
   font-weight: normal
   text-transform: uppercase
   font-size: 2.857rem
+  line-height: 1.3
   &--primary
     color: $primary
