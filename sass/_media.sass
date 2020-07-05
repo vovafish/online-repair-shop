@@ -12,7 +12,28 @@
       display: none
     &__content
       margin-left: 0
+@media screen and ( max-width: 760px )
+  .row
+    flex-direction: column
+    flex-wrap: wrap
+  .types
+    &__card
+      margin-bottom: 4.29rem
+  .card
+    &__text
+        margin-left: 0
+  .design
+    background-color: $dark
+    &__section-title
+      color: $light
+      margin-bottom: 2.785rem
+    &__card
+      margin-bottom: 5.7rem
 @media screen and ( max-width: 570px )
+  .section
+    &-title // change in the others as well
+      &__description
+        max-width: 21.857rem
   .contacts
     &__phone
       margin-right: 0

@@ -9,6 +9,9 @@
 .col
   flex-basis: 32%
 .card
+  &__image
+    display: block
+    width: 100%
   &__text
     position: relative
     margin: 0 auto // center
@@ -41,13 +44,3 @@
     background-color: $primary
     color: $light
     padding: 1.214rem 2.56rem
-@media screen and ( max-width: 760px )
-  .row
-    flex-direction: column
-    flex-wrap: wrap
-  .types
-    &__card
-      margin-bottom: 4.29rem
-  .card
-    &__text
-        margin-left: 0
