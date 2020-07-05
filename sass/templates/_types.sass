@@ -1,0 +1,53 @@
+.types
+  &__section-title
+    margin-bottom: 2.214rem
+
+.row
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+.col
+  flex-basis: 32%
+.card
+  &__text
+    position: relative
+    margin: 0 auto // center
+    max-width: 23.571rem
+    margin-top: -9.5rem
+    padding: 1.785rem 2.142rem
+    background-color: #fff
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+  &__title
+    font-family: 'Yeseva One', cursive
+    font-size: 1.285rem
+    margin-top: 0
+    margin-bottom: 0.7rem
+  &__list
+    margin: 0 0 0 1.2rem
+    padding: 0
+    font-size: 1.071rem
+    line-height: 1.785
+    color: $secondary
+    margin-bottom: 2.07rem
+  &__pricetag
+    position: absolute
+    left: 0
+    bottom: -1.785rem
+    font-family: 'Yeseva One', cursive
+    font-weight: normal
+    font-size: 1.285rem
+    line-height: 1.785rem
+    text-transform: uppercase
+    background-color: $primary
+    color: $light
+    padding: 1.214rem 2.56rem
+@media screen and ( max-width: 760px )
+  .row
+    flex-direction: column
+    flex-wrap: wrap
+  .types
+    &__card
+      margin-bottom: 4.29rem
+  .card
+    &__text
+        margin-left: 0
