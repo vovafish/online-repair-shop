@@ -341,7 +341,11 @@ img {
     text-align: center; }
     .section-title__heading {
       font-family: 'Yeseva One', cursive;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 15px; }
     .section-title__image {
       display: flex;
       align-items: center;
@@ -353,11 +357,13 @@ img {
         background-color: #E3B873;
         margin: 0 10px; }
     .section-title__description {
+      font-family: 'Futura Book', sans-serif;
       margin: auto;
       margin-top: 1.64rem;
-      font-size: 1.07rem;
-      line-height: 135.84%;
-      max-width: 48rem; }
+      max-width: 52rem;
+      font-weight: normal;
+      font-size: 1.428rem;
+      line-height: 27px; }
 
 .button {
   padding: 11px 24px;
@@ -568,7 +574,10 @@ img {
   text-transform: uppercase;
   background-color: #E3B873;
   color: #fff;
-  padding: 1.214rem 2.56rem; }
+  padding: 1.1rem 2.9rem; }
+
+.card__item {
+  font-family: 'Futura Book', sans-serif; }
 
 .design__section-title {
   margin-bottom: 2.785rem; }
