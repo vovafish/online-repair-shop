@@ -1,0 +1,46 @@
+.modal
+  position: fixed
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 199
+  left: 0
+  top: 0
+  bottom: 
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($dark, 0.6)
+  &__dialogue
+    position: relative
+    max-width: 36.35rem
+    background: $dark url('../img/modal/bg-lines.svg') center no-repeat
+    padding: 2.357rem 3.5rem 1.928rem
+    color: $light
+  &__close
+    position: absolute
+    right: 0
+    top: 0
+    width: 28px
+    height: 28px
+    background: transparent url('../img/modal/close.svg') no-repeat center
+    border: none
+    margin: 12px
+    cursor: pointer
+  &__title
+    font-family: 'Yeseva One', cursive
+    font-size: 1.357rem
+    text-align: center
+    margin: 0
+    margin-bottom: 2.428rem
+  &__form
+    display: flex
+    flex-direction: column
+  &__input
+    margin-bottom: 3.428rem
+    &:last-of-type
+      margin-bottom: 1rem
+  &__policy
+    margin-bottom: 2.7rem
+  &__button
+    align-self: flex-end
