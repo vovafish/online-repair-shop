@@ -48,3 +48,25 @@ btn.on('click', function(e) {
   $('html, body').animate({scrollTop:0}, '300');
 });
 
+/* Swiper slide */
+
+var mySwiper = new Swiper('.swiper-container', {
+  loop: true,
+  /* Swiper slide paginataion */
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+  /* Swiper slide navigation */
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})
+var next = $('.swiper-button-next');
+    prev = $('.swiper-button-prev');
+    bullets = $('.swiper-pagination');
+
+next.css('left', prev.width() + 10 + bullets.width() + 10)
+bullets.css('left', prev.width() + 10)
+

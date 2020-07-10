@@ -9,8 +9,18 @@ img
   max-width: 100%
 .section
   padding: 60px //temporarily
+  &--dark
+    background-color: $dark
+    color: $light
   &-title
     text-align: center
+    &--left
+      text-align: left
+    &__text
+      font-weight: normal
+      font-size: 1.285rem
+      line-height: 2.071rem
+      max-width: 31.571rem
     &__heading
       font-family: 'Yeseva One', cursive
       text-transform: uppercase
@@ -18,6 +28,21 @@ img
       font-size: 20px
       line-height: 28px
       margin-bottom: 15px // mb deldet
+      &--primary
+        color: $primary
+        line-height: 138.6% // mb create a new class for the declaration
+
+    &__word
+      align-items: center
+      display: flex 
+      &::after
+        content: ''
+        width: 92px
+        height: 1px
+        background-color: $primary
+        margin-left: 28px
+
+
 
     &__image
       display: flex
@@ -37,3 +62,4 @@ img
       font-weight: normal
       font-size: 1.428rem
       line-height: 27px
+
