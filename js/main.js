@@ -63,10 +63,14 @@ var mySwiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 })
-var next = $('.swiper-button-next');
-    prev = $('.swiper-button-prev');
+var nextPN = $('.swiper-button-next__pn');
+    prevPP = $('.swiper-button-prev__pp');
+    nextSN = $('.swiper-button-next__sn');
+    prevSP = $('.swiper-button-prev__sp');
     bullets = $('.swiper-pagination');
 
-next.css('left', prev.width() + 10 + bullets.width() + 10)
-bullets.css('left', prev.width() + 10)
+nextPN.css('left', prevPP.width() + 10 + bullets.width() + 10)
+bullets.css('left', prevPP.width() + 10)
 
+nextSN.css('left', prevSP.width() + 10 + bullets.width() + 10)
+bullets.css('left', prevSP.width() + 10)

@@ -1,0 +1,67 @@
+.steps
+  padding: 428.33px 0
+  background: $dark url('../img/modal/bg-lines.svg') no-repeat center/cover
+.swiper
+  &-slide
+    &__wrapper
+      display: flex
+      flex-wrap: wrap
+    &__object
+      // margin-right: 14.285rem
+    // &__object:hover
+    //   color: rgba($dark, 1)
+    &__unit
+      position: relative
+      font-family: 'Yeseva One', cursive
+      font-weight: normal
+      font-size: 1.071rem
+      line-height: 1.5rem
+      text-transform: uppercase
+      // border-bottom: 1px solid $primary
+    &__unit::after
+      content: ''
+      position: absolute
+      background-color: $primary
+      height: 1px
+      width: 16px
+      bottom: -4px
+      left: 0
+
+    &__number
+      font-family: 'Yeseva One', cursive
+      font-weight: normal
+      font-size: 1.285rem
+      line-height: 1.785rem 
+      text-transform: uppercase
+    &__title  
+      font-family: 'Yeseva One', cursive
+      font-weight: normal
+      font-size: 1.071rem
+      line-height: 1.642rem
+      text-transform: uppercase
+      color: $primary
+    &__subtitle
+      margin-bottom: 4.785rem
+      font-family: 'Futura Book', sans-serif
+      font-weight: normal
+      font-size: 1.071rem
+      line-height: 1.785rem
+  &-button
+      &-prev__sp, &-next__sn
+        bottom: 0
+        top: auto
+        background: url('../img/projects/arrow-prev.svg') no-repeat center
+        background-size: 42px
+        width: 42px
+        height: 14px
+        &::after
+          display: none
+      &-prev__sp
+        left: 0
+        background: url('../img/projects/arrow-prev.svg') no-repeat center
+      &-next__sn
+        background: url('../img/projects/arrow-next.svg') no-repeat center
+.swiper-container-horizontal>.swiper-pagination-bullets
+  width: auto
+  bottom: -1px
+

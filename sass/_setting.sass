@@ -14,20 +14,26 @@ img
     color: $light
   &-title
     text-align: center
+    &__intro
+      font-family: 'Futura Book', sans-serif
+      font-weight: 500
+      font-size: 1.071rem
+      line-height: 1.5rem
+      text-transform: uppercase
     &--left
       text-align: left
     &__text
       font-weight: normal
       font-size: 1.285rem
       line-height: 2.071rem
-      max-width: 31.571rem
+      max-width: 31.571rem // change location
     &__heading
       font-family: 'Yeseva One', cursive
       text-transform: uppercase
       font-weight: normal
       font-size: 20px
       line-height: 28px
-      margin-bottom: 15px // mb deldet
+      margin-bottom: 15px // mb deldet (// change location)
       &--primary
         color: $primary
         line-height: 138.6% // mb create a new class for the declaration
@@ -61,5 +67,15 @@ img
       max-width: 52rem
       font-weight: normal
       font-size: 1.428rem
-      line-height: 27px
+      line-height: 27px // change location
 
+      // Pagination
+        
+.swiper
+  &-pagination
+    &-bullet
+      background: rgba($light, 0.3)
+      &-active
+        background-color: $light
+.d-block
+  display: block

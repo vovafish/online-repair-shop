@@ -328,10 +328,13 @@ template {
   justify-content: space-between; }
 
 .col-30 {
-  flex-basis: 30%; }
+  width: 30%; }
 
 .col-50 {
   width: 50%; }
+
+.col-60 {
+  width: 60%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -353,6 +356,12 @@ img {
     color: #fff; }
   .section-title {
     text-align: center; }
+    .section-title__intro {
+      font-family: 'Futura Book', sans-serif;
+      font-weight: 500;
+      font-size: 1.071rem;
+      line-height: 1.5rem;
+      text-transform: uppercase; }
     .section-title--left {
       text-align: left; }
     .section-title__text {
@@ -397,6 +406,14 @@ img {
       font-weight: normal;
       font-size: 1.428rem;
       line-height: 27px; }
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3); }
+  .swiper-pagination-bullet-active {
+    background-color: #fff; }
+
+.d-block {
+  display: block; }
 
 .button {
   padding: 11px 24px;
@@ -759,41 +776,106 @@ img {
   font-style: italic;
   color: #96a2a7; }
 
-.swiper-slide {
+.swiper-slide__card {
   display: flex;
   flex-wrap: wrap; }
-  .swiper-slide__text {
-    flex-basis: 50%;
-    margin-bottom: 2.42rem;
-    padding-bottom: 2rem; }
-  .swiper-slide__heading {
-    font-family: 'Yeseva One', cursive;
-    font-size: 1.285rem;
-    line-height: 1.78rem;
-    color: #E3B873;
-    text-transform: uppercase;
-    margin-bottom: 0.64rem; }
 
-.swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.3); }
-  .swiper-pagination-bullet-active {
-    background-color: #fff; }
+.swiper-slide__text {
+  flex-basis: 50%;
+  margin-bottom: 2.42rem;
+  padding-bottom: 2rem; }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-slide__heading {
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.285rem;
+  line-height: 1.78rem;
+  color: #E3B873;
+  text-transform: uppercase;
+  margin-bottom: 0.64rem; }
+
+.swiper-button-prev__pp, .swiper-button-next__pn {
   bottom: 0;
   top: auto;
   background: url("../img/projects/arrow-prev.svg") no-repeat center;
   background-size: 42px;
   width: 42px;
   height: 14px; }
-  .swiper-button-prev::after, .swiper-button-next::after {
+  .swiper-button-prev__pp::after, .swiper-button-next__pn::after {
     display: none; }
 
-.swiper-button-prev {
+.swiper-button-prev__pp {
   left: 0;
   background: url("../img/projects/arrow-prev.svg") no-repeat center; }
 
-.swiper-button-next {
+.swiper-button-next__pn {
+  background: url("../img/projects/arrow-next.svg") no-repeat center; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  bottom: -1px; }
+
+.steps {
+  padding: 428.33px 0;
+  background: #131313 url("../img/modal/bg-lines.svg") no-repeat center/cover; }
+
+.swiper-slide__wrapper {
+  display: flex;
+  flex-wrap: wrap; }
+
+.swiper-slide__unit {
+  position: relative;
+  font-family: 'Yeseva One', cursive;
+  font-weight: normal;
+  font-size: 1.071rem;
+  line-height: 1.5rem;
+  text-transform: uppercase; }
+
+.swiper-slide__unit::after {
+  content: '';
+  position: absolute;
+  background-color: #E3B873;
+  height: 1px;
+  width: 16px;
+  bottom: -4px;
+  left: 0; }
+
+.swiper-slide__number {
+  font-family: 'Yeseva One', cursive;
+  font-weight: normal;
+  font-size: 1.285rem;
+  line-height: 1.785rem;
+  text-transform: uppercase; }
+
+.swiper-slide__title {
+  font-family: 'Yeseva One', cursive;
+  font-weight: normal;
+  font-size: 1.071rem;
+  line-height: 1.642rem;
+  text-transform: uppercase;
+  color: #E3B873; }
+
+.swiper-slide__subtitle {
+  margin-bottom: 4.785rem;
+  font-family: 'Futura Book', sans-serif;
+  font-weight: normal;
+  font-size: 1.071rem;
+  line-height: 1.785rem; }
+
+.swiper-button-prev__sp, .swiper-button-next__sn {
+  bottom: 0;
+  top: auto;
+  background: url("../img/projects/arrow-prev.svg") no-repeat center;
+  background-size: 42px;
+  width: 42px;
+  height: 14px; }
+  .swiper-button-prev__sp::after, .swiper-button-next__sn::after {
+    display: none; }
+
+.swiper-button-prev__sp {
+  left: 0;
+  background: url("../img/projects/arrow-prev.svg") no-repeat center; }
+
+.swiper-button-next__sn {
   background: url("../img/projects/arrow-next.svg") no-repeat center; }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
