@@ -1,15 +1,28 @@
 .steps
   padding: 428.33px 0
   background: $dark url('../img/modal/bg-lines.svg') no-repeat center/cover
+  &__60
+    margin-top: 60px
 .swiper
   &-slide
     &__wrapper
       display: flex
       flex-wrap: wrap
     &__object
-      // margin-right: 14.285rem
+      margin-right: 200px
+      margin-bottom: 40px
+    &__object:nth-child(3)
+      margin-right: 0
+    &__object:nth-child(6)
+      margin-right: 0
     // &__object:hover
     //   color: rgba($dark, 1)
+    &__point
+      font-family: 'Futura Book', sans-serif
+      font-weight: normal
+      font-size: 1.071rem
+      line-height: 1.285rem
+      width: 110px
     &__unit
       position: relative
       font-family: 'Yeseva One', cursive
@@ -17,7 +30,7 @@
       font-size: 1.071rem
       line-height: 1.5rem
       text-transform: uppercase
-      // border-bottom: 1px solid $primary
+      margin-bottom: 0.714rem
     &__unit::after
       content: ''
       position: absolute

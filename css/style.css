@@ -636,6 +636,7 @@ img {
 .card__title {
   font-family: 'Yeseva One', cursive;
   font-size: 1.285rem;
+  line-height: 1.785rem;
   margin-top: 0;
   margin-bottom: 0.7rem; }
 
@@ -817,10 +818,29 @@ img {
 .steps {
   padding: 428.33px 0;
   background: #131313 url("../img/modal/bg-lines.svg") no-repeat center/cover; }
+  .steps__60 {
+    margin-top: 60px; }
 
 .swiper-slide__wrapper {
   display: flex;
   flex-wrap: wrap; }
+
+.swiper-slide__object {
+  margin-right: 200px;
+  margin-bottom: 40px; }
+
+.swiper-slide__object:nth-child(3) {
+  margin-right: 0; }
+
+.swiper-slide__object:nth-child(6) {
+  margin-right: 0; }
+
+.swiper-slide__point {
+  font-family: 'Futura Book', sans-serif;
+  font-weight: normal;
+  font-size: 1.071rem;
+  line-height: 1.285rem;
+  width: 110px; }
 
 .swiper-slide__unit {
   position: relative;
@@ -828,7 +848,8 @@ img {
   font-weight: normal;
   font-size: 1.071rem;
   line-height: 1.5rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 0.714rem; }
 
 .swiper-slide__unit::after {
   content: '';
@@ -881,6 +902,33 @@ img {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: -1px; }
+
+.card__ticket {
+  background-color: #fff;
+  box-shadow: 0px 10px 15px rgba(255, 255, 255, 0.05);
+  max-width: 233px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  margin-top: -45px; }
+
+.card__profession {
+  font-family: 'Futura Book', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #959595; }
+
+.card__about {
+  font-family: 'Yeseva One', cursive;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #E3B873;
+  padding: 13px 23px; }
 
 @media screen and (max-width: 1200px) {
   html {
