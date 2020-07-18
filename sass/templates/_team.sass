@@ -1,8 +1,30 @@
 .team
+  position: relative
+  margin-top: -479px
+  &__idea
+    margin: -35px 0 0 -36px
+    position: absolute
+    padding: 13px
+    background: $primary
+    box-shadow: 0px 5px 20px rgba($primary, 0.5)
+  &__section
+    &-title
+      &--description
+        max-width: 448px // delet any geometry from section-title__description
+        margin-bottom: 5rem
+  &__card
+    margin-right: 5px
   &__section
     &-title
 .card
-  &__team
+  &__wrapper
+    &--team
+      text-align: center
+      padding: 19px 0 21px 0
+      
+  &__title
+    &--team
+      margin-bottom: 3px
   &__ticket
     position: relative
     z-index: 1
@@ -13,7 +35,7 @@
     flex-direction: column
     margin: auto
     align-items: center
-    margin-top: -45px
+    margin-top: -83px
     
   &__profession
     font-family: 'Futura Book', sans-serif
@@ -30,6 +52,6 @@
     text-transform: uppercase
     color: $light
     background-color: $primary
-    padding: 13px 23px
+    padding: 12px 45px
     
 

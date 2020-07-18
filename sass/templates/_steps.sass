@@ -1,16 +1,30 @@
 .steps
-  padding: 428.33px 0
+  padding: 428.33px 0 457.33px 0
   background: $dark url('../img/modal/bg-lines.svg') no-repeat center/cover
+  &__swiper
+    &-slide
+      &--title
+        margin-bottom: -3px
   &__60
     margin-top: 60px
+  &__section
+    &-title
+      font-family: 'Yeseva One', cursive
+      font-weight: normal
+      font-size: 1.928rem
+      line-height: 2.642rem
+      margin-top: 16px
+      margin-bottom: 84px
+  &__img
+    margin-top: 34px
 .swiper
   &-slide
     &__wrapper
       display: flex
       flex-wrap: wrap
     &__object
-      margin-right: 200px
-      margin-bottom: 40px
+      margin-right: 212px
+      // margin-bottom: 40px
     &__object:nth-child(3)
       margin-right: 0
     &__object:nth-child(6)
@@ -30,14 +44,14 @@
       font-size: 1.071rem
       line-height: 1.5rem
       text-transform: uppercase
-      margin-bottom: 0.714rem
+      margin-bottom: -0.31rem
     &__unit::after
       content: ''
       position: absolute
       background-color: $primary
       height: 1px
       width: 16px
-      bottom: -4px
+      bottom: -1.5px
       left: 0
 
     &__number
