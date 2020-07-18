@@ -74,3 +74,7 @@ bullets.css('left', prevPP.width() + 10)
 
 nextSN.css('left', prevSP.width() + 10 + bullets.width() + 10)
 bullets.css('left', prevSP.width() + 10)
+
+/* Animation */
+
+new WOW().init();
