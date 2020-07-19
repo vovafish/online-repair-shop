@@ -180,7 +180,42 @@ $('.footer__form').validate({
   }
 });
 
+/* Masks */
 
-  /* Masks */
+$('[type=tel]').mask('+371 00-000-000', {
+  placeholder: "+371 __-___-___"
+});
 
-  $('[type=tel]').mask('+371 00-000-000', {placeholder: "+371 __-___-___"}); 
+/* Map */
+
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+          center: [61.385704, 47.509668],
+          zoom: 9
+      }, {
+          searchControlProvider: 'yandex#search'
+      }),
+
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: 'Место нахождения',
+          balloonContent: 'Вот тут'
+      }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: '../img/footer/marker.png',
+          // Размеры метки.
+          iconImageSize: [32, 32],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-5, -38]
+      });
+  myMap.geoObjects
+      .add(myPlacemark);
+});

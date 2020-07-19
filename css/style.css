@@ -1112,6 +1112,8 @@ input.invalid {
   .footer__button {
     margin: auto;
     padding: 1.285rem 4.785rem; }
+  .footer__map {
+    min-height: 465px; }
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
