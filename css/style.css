@@ -462,7 +462,11 @@ img {
 
 .policy__label {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-family: 'Futura Book', sans-serif;
+  font-weight: normal;
+  font-size: 1.142rem;
+  line-height: 1.571rem; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -471,6 +475,8 @@ img {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+  .policy__label--center {
+    justify-content: center; }
 
 @keyframes zoom {
   0% {
@@ -1058,6 +1064,49 @@ img {
   color: #fff;
   background-color: #E3B873;
   padding: 12px 45px; }
+
+.footer {
+  background: #131313 url("../img/footer/main.jpg") no-repeat center/cover; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.071rem;
+    margin: auto;
+    padding: 2.5rem;
+    margin-bottom: 3.714rem; }
+  .footer__title {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.428rem;
+    line-height: 2rem;
+    text-align: center;
+    margin-bottom: 3.214rem; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 37.142rem;
+    justify-content: space-between;
+    margin: auto; }
+  .footer__input {
+    padding-top: 0.3rem; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group:nth-child(3) {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.6rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.285rem 4.785rem; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 4.285rem 0; }
 
 @media screen and (max-width: 1200px) {
   html {
