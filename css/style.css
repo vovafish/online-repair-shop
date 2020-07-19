@@ -1025,6 +1025,8 @@ input.invalid {
 .team {
   position: relative;
   margin-top: -479px; }
+  .team__row {
+    margin-bottom: 3.785rem; }
   .team__idea {
     margin: -35px 0 0 -36px;
     position: absolute;
@@ -1033,9 +1035,28 @@ input.invalid {
     box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
   .team__section-title--description {
     max-width: 448px;
-    margin-bottom: 5rem; }
+    margin-bottom: 5rem;
+    margin-top: 1.3rem; }
   .team__card {
     margin-right: 5px; }
+  .team__text {
+    font-family: 'Futura Book', sans-serif;
+    max-width: 40.785rem;
+    margin: auto;
+    font-weight: normal;
+    font-size: 1.428rem;
+    line-height: 2.45rem;
+    text-align: center;
+    margin-bottom: 4.28rem; }
+    .team__text::before {
+      content: '';
+      display: block;
+      margin: auto;
+      margin-bottom: 0.7rem;
+      width: 55px;
+      height: 1.5px;
+      background-color: #E3B873;
+      border-radius: 30px; }
 
 .card__wrapper--team {
   text-align: center;

@@ -1,6 +1,8 @@
 .team
   position: relative
   margin-top: -479px
+  &__row
+    margin-bottom: 3.785rem
   &__idea
     margin: -35px 0 0 -36px
     position: absolute
@@ -12,10 +14,30 @@
       &--description
         max-width: 448px // delet any geometry from section-title__description
         margin-bottom: 5rem
+        margin-top: 1.3rem
   &__card
     margin-right: 5px
   &__section
     &-title
+  &__text
+    font-family: 'Futura Book', sans-serif
+    max-width: 40.785rem
+    margin: auto
+    font-weight: normal
+    font-size: 1.428rem
+    line-height: 2.45rem
+    text-align: center
+    margin-bottom: 4.28rem
+    &::before
+      content: ''
+      display: block
+      margin: auto
+      margin-bottom: 0.7rem
+      width: 55px
+      height: 1.5px
+      background-color: $primary
+      border-radius: 30px
+    
 .card
   &__wrapper
     &--team
