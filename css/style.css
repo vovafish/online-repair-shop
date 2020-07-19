@@ -466,7 +466,7 @@ img {
   font-family: 'Futura Book', sans-serif;
   font-weight: normal;
   font-size: 1.142rem;
-  line-height: 1.571rem; }
+  line-height: 1.571; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -477,6 +477,12 @@ img {
     margin-right: 0.64rem; }
   .policy__label--center {
     justify-content: center; }
+
+label.invalid {
+  color: tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
 
 @keyframes zoom {
   0% {
@@ -807,10 +813,12 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.428rem; }
-    .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+  .modal__input:last-of-type {
+    margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {

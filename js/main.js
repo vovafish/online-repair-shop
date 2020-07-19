@@ -7,7 +7,7 @@
 //   const switchModal = () => {
 //     modal.classList.toggle('modal--visible');
 //   }
-  
+
 //   modalBtn.forEach(element => {
 //     element.addEventListener('click', switchModal);
 //   });
@@ -20,9 +20,9 @@
 
 $(document).ready(function () {
   var modal = $('.modal'),
-      modalBtn = $('[data-toggle="modal"]'),
-      closeBtn = $('.modal__close');
-    
+    modalBtn = $('[data-toggle="modal"]'),
+    closeBtn = $('.modal__close');
+
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
@@ -35,7 +35,7 @@ $(document).ready(function () {
 
 var btn = $('#button');
 
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(window).scrollTop() > 300) {
     btn.addClass('show');
   } else {
@@ -43,9 +43,11 @@ $(window).scroll(function() {
   }
 });
 
-btn.on('click', function(e) {
+btn.on('click', function (e) {
   e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
+  $('html, body').animate({
+    scrollTop: 0
+  }, '300');
 });
 
 /* Swiper slide */
@@ -64,10 +66,10 @@ var mySwiper = new Swiper('.swiper-container', {
   },
 })
 var nextPN = $('.swiper-button-next__pn');
-    prevPP = $('.swiper-button-prev__pp');
-    nextSN = $('.swiper-button-next__sn');
-    prevSP = $('.swiper-button-prev__sp');
-    bullets = $('.swiper-pagination');
+prevPP = $('.swiper-button-prev__pp');
+nextSN = $('.swiper-button-next__sn');
+prevSP = $('.swiper-button-prev__sp');
+bullets = $('.swiper-pagination');
 
 nextPN.css('left', prevPP.width() + 10 + bullets.width() + 10)
 bullets.css('left', prevPP.width() + 10)
@@ -78,3 +80,107 @@ bullets.css('left', prevSP.width() + 15)
 /* Animation */
 
 new WOW().init();
+
+/* Validation */
+
+$('.modal__form').validate({
+  errorClass: "invalid",
+  rules: {
+    //string rule
+    userName: {
+      required: true,
+      minlength: 2
+    },
+    //string rule
+    userPhone: "required",
+    // object rule
+    userEmail: {
+      required: true,
+      email: true
+    }
+  }, // messages
+  messages: {
+    userName: {
+      required: "Имя должно быть обязательно",
+      minlength: "Имя не короче двух букв"
+    },
+    userPhone: {
+      required: "Телефон должен быть обязательно"
+    },
+    userEmail: {
+      required: "Email должно быть обязательно",
+      email: "Введите в формате name@domain.com"
+    }
+  }
+});
+
+/* Validation */
+
+$('.control__form').validate({
+  errorClass: "invalid",
+  rules: {
+    //string rule
+    userName: {
+      required: true,
+      minlength: 2
+    },
+    //string rule
+    userPhone: "required",
+    // object rule
+    userEmail: {
+      required: true,
+      email: true
+    }
+  }, // messages
+  messages: {
+    userName: {
+      required: "Имя должно быть обязательно",
+      minlength: "Имя не короче двух букв"
+    },
+    userPhone: {
+      required: "Телефон должен быть обязательно"
+    },
+    userEmail: {
+      required: "Email должно быть обязательно",
+      email: "Введите в формате name@domain.com"
+    }
+  }
+});
+
+/* Validation */
+
+$('.footer__form').validate({
+  errorClass: "invalid",
+  rules: {
+    //string rule
+    userName: {
+      required: true,
+      minlength: 2
+    },
+    //string rule
+    userPhone: "required",
+    // object rule
+    userEmail: {
+      required: true,
+      email: true
+    }
+  }, // messages
+  messages: {
+    userName: {
+      required: "Имя должно быть обязательно",
+      minlength: "Имя не короче двух букв"
+    },
+    userPhone: {
+      required: "Телефон должен быть обязательно"
+    },
+    userEmail: {
+      required: "Email должно быть обязательно",
+      email: "Введите в формате name@domain.com"
+    }
+  }
+});
+
+
+  /* Masks */
+
+  $('[type=tel]').mask('+371 00-000-000', {placeholder: "+371 __-___-___"}); 
