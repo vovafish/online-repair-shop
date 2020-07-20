@@ -111,6 +111,20 @@ $('.modal__form').validate({
       required: "Email должно быть обязательно",
       email: "Введите в формате name@domain.com"
     }
+  },
+
+  submitHandler: function(form) {
+    var modal = $('.modal')
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        alert('Все OK');
+        $(form)[0].reset(); // W!
+        modal.removeClass('modal--visible');
+      }
+    });
   }
 });
 
