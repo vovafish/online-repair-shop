@@ -1094,6 +1094,72 @@ input.invalid {
   background-color: #E3B873;
   padding: 12px 45px; }
 
+.customers {
+  background-color: #FDFDFD;
+  padding-bottom: 193px; }
+  .customers__section-title--description {
+    max-width: 360px;
+    margin-bottom: 2.714rem; }
+  .customers__card {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(19, 19, 19, 0.04);
+    padding: 20px 20px 32px 20px; }
+  .customers__img {
+    border-radius: 38px;
+    margin-right: 32px;
+    vertical-align: middle; }
+  .customers__name {
+    display: inline-block;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #181818;
+    max-width: 185px;
+    vertical-align: middle; }
+  .customers__comment {
+    font-family: 'Futura Book', sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 27px;
+    color: #959595;
+    max-width: 324px;
+    margin-bottom: 36px; }
+  .customers__work {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 23px 0 16px;
+    margin-left: -20px;
+    max-width: 293px;
+    background: #E3B873;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
+  .customers__size {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #fff; }
+    .customers__size::after {
+      content: '';
+      margin: 0 15px 0 15px;
+      border-right: 1px solid #fff; }
+  .customers__time {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 24px;
+    color: #fff; }
+  .customers__number {
+    margin-left: 15px; }
+
 .footer {
   background: #131313 url("../img/footer/main.jpg") no-repeat center/cover; }
   .footer__wrap {
@@ -1134,7 +1200,8 @@ input.invalid {
     margin: auto;
     padding: 1.285rem 4.785rem; }
   .footer__map {
-    min-height: 465px; }
+    min-height: 465px;
+    margin-bottom: 60px; }
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }

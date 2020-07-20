@@ -588,6 +588,9 @@
     </section>
     <!-- /.section section--dark steps -->
     <section class="section team">
+      <!-- 
+        mb put card block into col-30 block 
+       -->
       <div class="container">
         <div class="section-title team__section-title section-title--light">
           <h2 class="section-title__heading wow animate__animated animate__fadeInUp">Наша команда</h2>
@@ -663,12 +666,93 @@
         </div>
         <!-- /.row -->
         <p class="team__text">
-          Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.
+          Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У
+          нас нет гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.
         </p>
       </div>
     </section>
     <!-- /.section team -->
-    
+    <section class="section customers">
+      <div class="container">
+        <div class="section-title customers__section-title">
+          <h2 class="section-title__heading wow animate__animated animate__fadeInUp">Наша команда</h2>
+          <!-- /.section-title__heading -->
+          <div class="section-title__image">
+            <img src="img/customers/customers.svg" alt="customers">
+          </div>
+          <!-- /.section-title__image -->
+          <p class="section-title__description customers__section-title--description">
+            Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться
+          </p>
+          <!-- /.section-title__description -->
+        </div>
+        <!-- /.section-title -->
+        <div class="row">
+          <div class="col-30">
+            <div class="card customers__card">
+              <div class="customers__profile">
+                <img src="img/customers/p1.jpg" alt="" class="customers__img">
+                <h3 class="customers__name">Савельева Екатерина Львовна</h3>
+              </div>
+              <p class="customers__comment">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</p>
+              <div class="customers__work">
+                <div class="customers__size">
+                  <img src="img/customers/i-size.svg" alt="">
+                  <p class="customers__number">40 m<sup>2</sup></p>
+                </div>
+                <div class="customers__time">
+                  <img src="img/customers/i-time.svg" alt="">
+                  <p class="customers__number">48 дней</p>
+                </div>
+              </div>
+            </div>
+            <!-- /.card customers__card -->
+          </div>
+          <div class="col-30">
+            <div class="card customers__card">
+              <div class="customers__profile">
+                <img src="img/customers/p2.jpg" alt="" class="customers__img">
+                <h3 class="customers__name">Большов Михаил Анатольевич</h3>
+              </div>
+              <p class="customers__comment">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Я рекомендую этих мастеров.</p>
+              <div class="customers__work">
+                <div class="customers__size">
+                  <img src="img/customers/i-size.svg" alt="">
+                  <p class="customers__number">90 m<sup>2</sup></p>
+                </div>
+                <div class="customers__time">
+                  <img src="img/customers/i-time.svg" alt="">
+                  <p class="customers__number">128 дней</p>
+                </div>
+              </div>
+            </div>
+            <!-- /.card customers__card -->
+          </div>
+          <div class="col-30">
+            <div class="card customers__card">
+              <div class="customers__profile">
+                <img src="img/customers/p3.jpg" alt="" class="customers__img">
+                <h3 class="customers__name">Хасанов Даниил Муратович</h3>
+              </div>
+              <p class="customers__comment">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Цены демократические.</p>
+              <div class="customers__work">
+                <div class="customers__size">
+                  <img src="img/customers/i-size.svg" alt="">
+                  <p class="customers__number">56 m<sup>2</sup></p>
+                </div>
+                <div class="customers__time">
+                  <img src="img/customers/i-time.svg" alt="">
+                  <p class="customers__number">86 дней</p>
+                </div>
+              </div>
+            </div>
+            <!-- /.card customers__card -->
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section customers -->
   </main>
   <footer class="footer section--dark">
     <div class="container">
@@ -734,7 +818,7 @@
     <div class="modal__dialogue">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
-      <form action="#" class="form modal__form">
+      <form action="send.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
           <label for="user-name" class="label form__label label--light">Имя</label>
           <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name"
