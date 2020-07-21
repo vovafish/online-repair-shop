@@ -188,20 +188,20 @@
         </p>
         <form action="#" class="form control__form">
           <div class="control__input-group">
-            <label for="user-name" class="label form__label control__label">Имя</label>
+            <label for="control-user-name" class="label form__label control__label">Имя</label>
             <input type="text" name="userName" class="input form__input control__input" id="control-user-name"
               placeholder="Как вас зовут:">
           </div>
 
           <div class="control__input-group">
-            <label for="user-phone" class="label form__label control__label">Телефон</label>
+            <label for="control-user-phone" class="label form__label control__label">Телефон</label>
             <input type="tel" name="userPhone" class="input form__input control__input" id="control-user-phone"
               placeholder="Ваш номер телефона:">
           </div>
           <button class="button button--primary control__button">Отправить</button>
           <div class="policy control__policy">
             <input type="checkbox" name="policy-checkbox" id="control-policy-checkbox" class="policy__checkbox" checked>
-            <label for="policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой
+            <label for="control-policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой
               данных</label>
           </div>
         </form>
@@ -760,32 +760,43 @@
         <div class="footer__title">Остались вопросы?</div>
         <form action="#" class="form footer__form">
           <div class="input-group footer__input-group">
-            <label for="user-name" class="label form__label label--light">Имя</label>
+            <label for="footer-user-name" class="label form__label label--light">Имя</label>
             <input type="text" name="userName" class="input form__input footer__input input--light" id="footer-user-name"
               placeholder="Как вас зовут:">
           </div>
           <!-- /.input-group footer__input-group -->
           <div class="input-group footer__input-group">
-            <label for="user-phone" class="label form__label label--light">Телефон</label>
+            <label for="footer-user-phone" class="label form__label label--light">Телефон</label>
             <input type="tel" name="userPhone" class="input form__input footer__input input--light" id="footer-user-phone"
               placeholder="Ваш номер телефона:">
           </div>
           <!-- /.input-group footer__input-group -->
           <div class="input-group footer__input-group">
-            <label for="user-question" class="label form__label label--light">Вопрос</label>
-            <input type="text" class="input form__input footer__input input--light" id="footer-user-question"
+            <label for="footer-user-question" class="label form__label label--light">Вопрос</label>
+            <input type="text" name="userQuestion" class="input form__input footer__input input--light" id="footer-user-question"
               placeholder="Я хочу спросить">
           </div>
           <!-- /.input-group footer__input-group -->
           <div class="policy footer__policy">
             <input type="checkbox" name="policy-checkbox" id="footer-policy-checkbox" class="policy__checkbox" checked>
-            <label for="policy-checkbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой
+            <label for="footer-policy-checkbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой
               данных</label>
           </div>
           <button class="button button--primary footer__button">Отправить</button>
         </form>
       </div>
       <!-- /.footer__wrap -->
+      <div class="footer__info">
+        <h2 class="footer__contacts">Ростов на дону, Торговый центр Plaza
+          Прямой телефон +7 (999) 768 32 99</h2>
+          <div class="footer__media">
+            <!-- <img src="img/footer/i-mail.svg" alt="" class="footer__img">
+            <img src="img/footer/i-insta.svg" alt="" class="footer__img"> -->
+            <a href="#"><img src="img/footer/i-mail.svg" alt="" class="footer__img"></a>
+            <a href="#"><img src="img/footer/i-insta.svg" alt="" class="footer__img"></a>
+          </div>
+      </div>
+      <!-- /.info footer__info -->
       <div class="map footer__map" id="map">
       </div>
       <!-- /.map footer__map -->
@@ -820,24 +831,24 @@
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
       <form action="send.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
-          <label for="user-name" class="label form__label label--light">Имя</label>
+          <label for="modal-user-name" class="label form__label label--light">Имя</label>
           <input type="text" name="userName" class="input form__input modal__input input--light" id="modal-user-name"
             placeholder="Как вас зовут:">
         </div>
         <div class="input-group modal__input-group">
-          <label for="user-phone" class="label form__label label--light">Телефон</label>
+          <label for="modal-user-phone" class="label form__label label--light">Телефон</label>
           <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="modal-user-phone"
             placeholder="Ваш номер телефона:">
         </div>
         <div class="input-group modal__input-group">
 
-          <label for="user-email" class="label form__label label--light">Email</label>
+          <label for="modal-user-email" class="label form__label label--light">Email</label>
           <input type="email" name="userEmail" class="input form__input modal__input input--light" id="modal-user-email"
             placeholder="Ваш email">
         </div>
         <div class="policy modal__policy">
           <input type="checkbox" name="policy-checkbox" id="modal-policy-checkbox" class="policy__checkbox" checked>
-          <label for="policy-checkbox" class="policy__label modal__policy-label">Я соглашаюсь с обработкой
+          <label for="modal-policy-checkbox" class="policy__label modal__policy-label">Я соглашаюсь с обработкой
             данных</label>
         </div>
 

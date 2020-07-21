@@ -123,6 +123,7 @@ $('.modal__form').validate({
         alert('Все OK');
         $(form)[0].reset(); // W!
         modal.removeClass('modal--visible');
+      
       }
     });
   }

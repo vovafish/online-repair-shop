@@ -334,10 +334,11 @@ template {
   width: 50%; }
 
 .col-60 {
-  width: 61%; }
+  width: 60%; }
 
 *, *:before, *:after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 html {
   font-size: 14px; }
@@ -693,9 +694,6 @@ input.invalid {
   flex-direction: column;
   flex-basis: 30%; }
 
-.control__label {
-  margin-bottom: -7px; }
-
 .control__policy {
   flex-basis: 100%;
   margin-top: 1.2rem; }
@@ -768,8 +766,10 @@ input.invalid {
 .card__item {
   font-family: 'Futura Book', sans-serif; }
 
-.design__section-title {
-  margin-bottom: 2.785rem; }
+.design {
+  margin-bottom: -36rem; }
+  .design__section-title {
+    margin-bottom: 2.785rem; }
 
 .modal {
   opacity: 0;
@@ -925,7 +925,7 @@ input.invalid {
   bottom: -1px; }
 
 .steps {
-  padding: 428.33px 0 457.33px 0;
+  padding: 470.33px 0 506.33px 0;
   background: #131313 url("../img/modal/bg-lines.svg") no-repeat center/cover; }
   .steps__swiper-slide--title {
     margin-bottom: -3px; }
@@ -1096,7 +1096,7 @@ input.invalid {
 
 .customers {
   background-color: #FDFDFD;
-  padding-bottom: 193px; }
+  padding-bottom: 364px; }
   .customers__section-title--description {
     max-width: 360px;
     margin-bottom: 2.714rem; }
@@ -1199,6 +1199,30 @@ input.invalid {
   .footer__button {
     margin: auto;
     padding: 1.285rem 4.785rem; }
+  .footer__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .footer__contacts {
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #E3B873;
+    max-width: 551px; }
+  .footer__media {
+    margin-top: 26px;
+    margin-bottom: 40px; }
+  .footer__img {
+    background-color: #E3B873;
+    border-radius: 14px;
+    padding: 6px;
+    width: 28px;
+    height: 28px;
+    margin-right: 15px; }
   .footer__map {
     min-height: 465px;
     margin-bottom: 60px; }
