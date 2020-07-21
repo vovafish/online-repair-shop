@@ -86,7 +86,7 @@ new WOW().init();
 $('.modal__form').validate({
   errorClass: "invalid",
   rules: {
-    //string rule
+    //object rule
     userName: {
       required: true,
       minlength: 2
@@ -97,6 +97,10 @@ $('.modal__form').validate({
     userEmail: {
       required: true,
       email: true
+    },
+    //object rule
+    policyCheckbox: {
+      required: true,
     }
   }, // messages
   messages: {
@@ -110,8 +114,14 @@ $('.modal__form').validate({
     userEmail: {
       required: "Email должно быть обязательно",
       email: "Введите в формате name@domain.com"
+    },
+    //object rule
+    policyCheckbox: {
+      required: "Пожалуйста согласитесь с политикой обработки данных"
     }
   },
+
+  /* Ajax */
 
   submitHandler: function(form) {
     var modal = $('.modal')
@@ -134,17 +144,16 @@ $('.modal__form').validate({
 $('.control__form').validate({
   errorClass: "invalid",
   rules: {
-    //string rule
+    //object rule
     userName: {
       required: true,
       minlength: 2
     },
     //string rule
     userPhone: "required",
-    // object rule
-    userEmail: {
+    //object rule
+    policyCheckbox: {
       required: true,
-      email: true
     }
   }, // messages
   messages: {
@@ -155,10 +164,27 @@ $('.control__form').validate({
     userPhone: {
       required: "Телефон должен быть обязательно"
     },
-    userEmail: {
-      required: "Email должно быть обязательно",
-      email: "Введите в формате name@domain.com"
+    //object rule
+    policyCheckbox: {
+      required: "Пожалуйста согласитесь с политикой обработки данных"
     }
+  },
+
+  /* Ajax */
+
+  submitHandler: function(form) {
+    var modal = $('.modal')
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        alert('Все OK');
+        $(form)[0].reset(); // W!
+        modal.removeClass('modal--visible');
+      
+      }
+    });
   }
 });
 
@@ -167,17 +193,21 @@ $('.control__form').validate({
 $('.footer__form').validate({
   errorClass: "invalid",
   rules: {
-    //string rule
+    //object rule
     userName: {
       required: true,
       minlength: 2
     },
+    //object rule
+    userQuestion: {
+      required: true,
+      minlength: 10
+    },
     //string rule
     userPhone: "required",
-    // object rule
-    userEmail: {
+    //object rule
+    policyCheckbox: {
       required: true,
-      email: true
     }
   }, // messages
   messages: {
@@ -185,13 +215,34 @@ $('.footer__form').validate({
       required: "Имя должно быть обязательно",
       minlength: "Имя не короче двух букв"
     },
+    userQuestion: {
+      required: "Задайте пожалуйста вопрос",
+      minlength: "Опишите вопрос более развернуто"
+    },
     userPhone: {
       required: "Телефон должен быть обязательно"
     },
-    userEmail: {
-      required: "Email должно быть обязательно",
-      email: "Введите в формате name@domain.com"
+    //object rule
+    policyCheckbox: {
+      required: "Пожалуйста согласитесь с политикой обработки данных"
     }
+  },
+
+  /* Ajax */
+
+  submitHandler: function(form) {
+    var modal = $('.modal')
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        alert('Все OK');
+        $(form)[0].reset(); // W!
+        modal.removeClass('modal--visible');
+      
+      }
+    });
   }
 });
 
