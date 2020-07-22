@@ -99,7 +99,7 @@ $('.modal__form').validate({
       email: true
     },
     //object rule
-    policyCheckbox: {
+    modalPolicyCheckbox: {
       required: true,
     }
   }, // messages
@@ -116,14 +116,14 @@ $('.modal__form').validate({
       email: "Введите в формате name@domain.com"
     },
     //object rule
-    policyCheckbox: {
-      required: "Пожалуйста согласитесь с политикой обработки данных"
+    modalPolicyCheckbox: {
+      required: "Cогласитесь с политикой обработки данных"
     }
   },
 
   /* Ajax */
 
-  submitHandler: function(form) {
+  submitHandler: function (form) {
     var modal = $('.modal')
     $.ajax({
       type: "POST",
@@ -133,7 +133,7 @@ $('.modal__form').validate({
         alert('Все OK');
         $(form)[0].reset(); // W!
         modal.removeClass('modal--visible');
-      
+
       }
     });
   }
@@ -152,7 +152,7 @@ $('.control__form').validate({
     //string rule
     userPhone: "required",
     //object rule
-    policyCheckbox: {
+    controlPolicyCheckbox: {
       required: true,
     }
   }, // messages
@@ -165,14 +165,14 @@ $('.control__form').validate({
       required: "Телефон должен быть обязательно"
     },
     //object rule
-    policyCheckbox: {
-      required: "Пожалуйста согласитесь с политикой обработки данных"
+    controlPolicyCheckbox: {
+      required: "Cогласитесь с политикой обработки данных"
     }
   },
 
   /* Ajax */
 
-  submitHandler: function(form) {
+  submitHandler: function (form) {
     var modal = $('.modal')
     $.ajax({
       type: "POST",
@@ -182,7 +182,7 @@ $('.control__form').validate({
         alert('Все OK');
         $(form)[0].reset(); // W!
         modal.removeClass('modal--visible');
-      
+
       }
     });
   }
@@ -206,7 +206,7 @@ $('.footer__form').validate({
     //string rule
     userPhone: "required",
     //object rule
-    policyCheckbox: {
+    footerPolicyCheckbox: {
       required: true,
     }
   }, // messages
@@ -223,14 +223,14 @@ $('.footer__form').validate({
       required: "Телефон должен быть обязательно"
     },
     //object rule
-    policyCheckbox: {
-      required: "Пожалуйста согласитесь с политикой обработки данных"
+    footerPolicyCheckbox: {
+      required: "Cогласитесь с политикой обработки данных"
     }
   },
 
   /* Ajax */
 
-  submitHandler: function(form) {
+  submitHandler: function (form) {
     var modal = $('.modal')
     $.ajax({
       type: "POST",
@@ -240,7 +240,7 @@ $('.footer__form').validate({
         alert('Все OK');
         $(form)[0].reset(); // W!
         modal.removeClass('modal--visible');
-      
+
       }
     });
   }
@@ -256,33 +256,56 @@ $('[type=tel]').mask('+371 00-000-000', {
 
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
-          center: [61.385704, 47.509668],
-          zoom: 9
-      }, {
-          searchControlProvider: 'yandex#search'
-      }),
+      center: [61.385704, 47.509668],
+      zoom: 15
+    }, {
+      searchControlProvider: 'yandex#search'
+    }),
 
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
+    // Создаём макет содержимого.
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
 
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Место нахождения',
-          balloonContent: 'Вот тут'
-      }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: '../img/footer/marker.png',
-          // Размеры метки.
-          iconImageSize: [32, 32],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-5, -38]
-      });
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+      hintContent: 'Место нахождения',
+      balloonContent: 'Вот тут'
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#image',
+      // Своё изображение иконки метки.
+      iconImageHref: '../img/footer/marker.png',
+      // Размеры метки.
+      iconImageSize: [32, 32],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-5, -38]
+    });
   myMap.geoObjects
-      .add(myPlacemark);
-  
+    .add(myPlacemark);
+
+  function toggle() {
+    bigMap = !bigMap;
+
+    // Добавляем/убираем CSS-класс, определяющий размеры контейнера карты,
+    // заданные в абсолютных единицах (300x200 px).
+    if (bigMap) {
+      $('#map').removeClass('smallMap');
+    } else {
+      $('#map').addClass('smallMap');
+    }
+
+    // Если выставлен флаг, сообщаем карте, что ей следует
+    // привести свои размеры к размерам контейнера.
+    if ($('#checkbox').prop('checked')) {
+      myMap.container.fitToViewport();
+    }
+  }
+
+  /* Map disable scrolling */
+
+  myMap.behaviors.disable('scrollZoom'); 
+
+
 });
