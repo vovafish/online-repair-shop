@@ -1,12 +1,16 @@
 .footer
+  display: flex
+  flex-direction: column
+  align-items: center
   background: $dark url('../img/footer/main.jpg') no-repeat center / cover
   &__wrap
     background-color: $black
-    max-width: 63.071rem
-    margin: auto
+    min-width: 63.071rem
     padding: 2.5rem
     margin-bottom: 3.714rem
-    // margin-top: -20rem  
+    position: absolute
+    margin-top: -16rem
+    /* margin-left: 80vh;
   &__title
     margin-top: 0
     text-transform: uppercase
@@ -43,6 +47,7 @@
     flex-direction: column
     justify-content: center
     align-items: center
+    padding-top: 19rem
   &__contacts
     font-family: 'Yeseva One', cursive
     font-weight: normal
@@ -70,4 +75,5 @@
   &__menu
     background-color: $dark
     padding: 4.285rem 0
+    width: -webkit-fill-available
     

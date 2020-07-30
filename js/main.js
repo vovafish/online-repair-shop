@@ -77,6 +77,7 @@ bullets.css('left', prevPP.width() + 10)
 nextSN.css('left', prevSP.width() + 10 + bullets.width() + 10 + bullets.width() + 10)
 bullets.css('left', prevSP.width() + 15)
 
+
 /* Animation */
 
 new WOW().init();
@@ -224,6 +225,64 @@ $('.footer__form').validate({
     },
     //object rule
     footerPolicyCheckbox: {
+      required: "Cогласитесь с политикой обработки данных"
+    }
+  },
+
+  /* Ajax */
+
+  submitHandler: function (form) {
+    var modal = $('.modal')
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        alert('Все OK');
+        $(form)[0].reset(); // W!
+        modal.removeClass('modal--visible');
+
+      }
+    });
+  }
+});
+
+/* Validation */
+
+$('.plan__form').validate({
+  errorClass: "invalid",
+  rules: {
+    //object rule
+    userName: {
+      required: true,
+      minlength: 2
+    },
+    //string rule
+    userPhone: "required",
+    // object rule
+    userEmail: {
+      required: true,
+      email: true
+    },
+    //object rule
+    planPolicyCheckbox: {
+      required: true,
+    }
+  }, // messages
+  messages: {
+    userName: {
+      required: "Имя должно быть обязательно",
+      minlength: "Имя не короче двух букв"
+    },
+    userPhone: {
+      required: "Телефон должен быть обязательно"
+    },
+    userEmail: {
+      required: "Email должно быть обязательно",
+      email: "Введите в формате name@domain.com"
+    },
+    //object rule
+    planPolicyCheckbox: {
       required: "Cогласитесь с политикой обработки данных"
     }
   },
