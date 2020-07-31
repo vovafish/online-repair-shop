@@ -1,5 +1,9 @@
 /* Modal window but on ES6 */
 
+const {
+  on
+} = require("gulp");
+
 // document.addEventListener("DOMContentLoaded", function(event) {
 //   const modal = document.querySelector('.modal');
 //   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
@@ -364,7 +368,26 @@ ymaps.ready(function () {
 
   /* Map disable scrolling */
 
-  myMap.behaviors.disable('scrollZoom'); 
+  myMap.behaviors.disable('scrollZoom');
 
+
+  /* IFrame Player API */
+
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '465',
+      width: '100%',
+      videoId: '54bAimQUGi4',
+      events: {
+        'onReady': videoPlay,
+
+      }
+    });
+  })
+
+  function videoPlay(event) {
+    event.target.videoPlay();
+  }
 
 });
