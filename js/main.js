@@ -1,8 +1,8 @@
 /* Modal window but on ES6 */
 
-const {
-  on
-} = require("gulp");
+// const {
+//   on
+// } = require("gulp");
 
 // document.addEventListener("DOMContentLoaded", function(event) {
 //   const modal = document.querySelector('.modal');
