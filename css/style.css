@@ -885,12 +885,64 @@ label {
   font-family: 'Futura Book', sans-serif; }
 
 .plan {
+  padding-top: 10rem;
   padding-bottom: 242px; }
-  .plan__box:last-of-type {
+  .plan__box--1 {
+    position: absolute;
+    z-index: 3;
+    margin-left: 183px;
+    margin-top: 27px; }
+  .plan__box--2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+  .plan__point {
+    width: 379px;
+    position: absolute;
+    display: flex;
+    font-family: 'Futura Book', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    list-style-type: none;
+    margin-bottom: 100px;
+    color: #363636; }
+    .plan__point::before {
+      content: '';
+      color: #fff;
+      background-color: #E3B873;
+      padding: 8px;
+      margin-right: 15px;
+      border-radius: 20px;
+      font-family: 'Yeseva One', cursive;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 20px;
+      text-align: center;
+      height: fit-content; }
+    .plan__point--1 {
+      width: 379px;
+      margin-top: 5px;
+      margin-left: -8px; }
+      .plan__point--1::before {
+        content: '01'; }
+    .plan__point--2 {
+      margin-top: 112px;
+      margin-left: 69px; }
+      .plan__point--2::before {
+        content: '02'; }
+    .plan__point--3 {
+      margin-top: 274px;
+      margin-left: 87px; }
+      .plan__point--3::before {
+        content: '03'; }
+    .plan__point--4 {
+      width: 360px;
+      margin-top: 436px;
+      margin-left: 19px; }
+      .plan__point--4::before {
+        content: '04'; }
   .plan__dialogue {
     position: relative;
     max-width: 36.35rem;
@@ -917,6 +969,7 @@ label {
   .plan__policy {
     margin-bottom: 2.7rem; }
   .plan__button {
+    padding: 19px 21px;
     align-self: flex-end; }
   .plan__save {
     margin-top: 38px;
@@ -939,6 +992,16 @@ label {
       border-radius: 34px;
       vertical-align: middle;
       margin-right: 25.5px; }
+  .plan__img {
+    position: absolute;
+    background: url("img/plan/main.jpg");
+    z-index: 1;
+    margin-top: 53px; }
+  .plan__wrap {
+    position: absolute;
+    z-index: 1;
+    margin-left: 118px;
+    margin-top: -75px; }
 
 .design {
   margin-bottom: -36rem;

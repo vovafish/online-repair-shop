@@ -1,25 +1,65 @@
 .plan
-  // display: flex
-  // justify-content: center
-  // align-items: center
-  // z-index: 199
-  // left: 0
-  // top: 0
-  // bottom: 
-  // right: 0
-  // width: 100%
-  // height: 100%
+  padding-top: 10rem
   padding-bottom: 242px
   &__box
-    &:last-of-type
+    &--1
+      position: absolute
+      z-index: 3
+      margin-left: 183px
+      margin-top: 27px
+    &--2
       display: flex
       flex-direction: column
       justify-content: center
       align-items: center
-  // &__img
-  //   border: 2px solid $primary
-  //   border-radius: 341px
-    
+  &__point
+    width: 379px
+    position: absolute
+    display: flex
+    font-family: 'Futura Book', sans-serif
+    font-weight: 500
+    font-size: 18px
+    line-height: 21px
+    list-style-type: none
+    margin-bottom: 100px
+    // max-width: 364px
+    color: #363636
+    &::before
+      content: ''
+      color: #fff
+      background-color: #E3B873
+      padding: 10px
+      margin-right: 15px
+      border-radius: 20px
+      font-family: 'Yeseva One', cursive
+      font-weight: normal
+      font-size: 19px
+      line-height: 20px
+      text-align: center
+      height: fit-content
+    &--1
+      width: 384px
+      margin-left: -12px
+
+      &::before
+        content: '01'
+    &--2
+      margin-top: 112px
+      margin-left: 61px
+      &::before
+        content: '02'
+    &--3
+      margin-top: 272px
+      margin-left: 86px
+      &::before
+        content: '03'
+    &--4
+      width: 360px
+      margin-top: 432px
+      margin-left: 21px
+      &::before
+        content: '04'
+
   &__dialogue
     position: relative
     max-width: 36.35rem
@@ -47,6 +87,7 @@
   &__policy
     margin-bottom: 2.7rem
   &__button
+    padding: 19px 21px
     align-self: flex-end
   &__save
     margin-top: 38px
@@ -69,4 +110,16 @@
       border-radius: 34px
       vertical-align: middle
       margin-right: 25.5px
-      
+  &__img
+    position: absolute
+    background: url('img/plan/main.jpg')
+    z-index: 1
+    margin-top: 53px
+    // &::after
+  &__wrap
+    position: absolute
+    z-index: 1
+    margin-left: 118px
+    margin-top: -75px   
+
+    
