@@ -311,9 +311,12 @@ $('.plan__form').validate({
 
 /* Masks */
 
-$('[type=tel]').mask('+371 00-000-000', {
-  placeholder: "+371 __-___-___"
-});
+// $('[type=tel]').mask('+371 00-000-000', {
+//   placeholder: "Ваш номер телефона:"
+// });
+// $('.plan__input--value').mask('+371 00-000-000', {
+//   placeholder: "Ваш телефон:"
+// });
 
 /* Map */
 
