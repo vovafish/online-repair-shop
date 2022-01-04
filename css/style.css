@@ -488,11 +488,11 @@ label.invalid {
 input.invalid {
   border-bottom: 1px solid tomato; }
 
-label {
+/* label { */
   /* Modal */
   /* Control */
   /* Footer */
-  /* Plan */ }
+  /* Plan */ 
   label#modalPolicyCheckbox-error.invalid {
     position: absolute;
     margin-top: 49px;
@@ -1100,7 +1100,8 @@ label {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color .3s,  opacity .5s, visibility .5s;
+  transition: background-color .3s, 
+ opacity .5s, visibility .5s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000; }
