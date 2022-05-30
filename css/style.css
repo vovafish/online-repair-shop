@@ -959,7 +959,7 @@ input.invalid {
         content: '04'; }
   .plan__dialogue {
     position: relative;
-    width: 36.14rem;
+    width: 31.14rem;
     background: #131313 url("../img/modal/bg-lines.svg") center no-repeat;
     padding: 2.357rem 3.5rem 1.928rem;
     color: #fff; }
